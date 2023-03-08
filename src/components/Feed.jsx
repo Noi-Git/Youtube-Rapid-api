@@ -5,10 +5,14 @@ import { Sidebar, Videos } from '../components'
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState('New')
+  const [videos, setVideos] = useState([])
 
   useEffect(() => {
     // Step 1 --> call fetchFromAPI when the page load and passes in the (url) query parameters
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+    // .then will be the result of the promise -- need to use .then in async function
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
+      setVideos(data.items)
+    )
   }, [selectedCategory])
 
   return (
@@ -42,7 +46,7 @@ const Feed = () => {
           {selectedCategory} &nbsp;
           <span style={{ color: '#f31503' }}>videos</span>
         </Typography>
-        <Videos videos={[]} />
+        <Videos videos={videos} />
       </Box>
     </Stack>
   )
