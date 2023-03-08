@@ -1,10 +1,9 @@
 // utility function to fetch api
-import axios from 'axios'
-
+// import axios from 'axios'
 const axios = require('axios')
 
 // look for the url you want on the left of Rapid api
-const BASE_URL = 'https://youtube-v31.p.rapidapi.com/search'
+const BASE_URL = 'https://youtube-v31.p.rapidapi.com/'
 
 const options = {
   params: {
