@@ -20,7 +20,13 @@ const VideosCard = ({
   // console.log('+++: ', video)
   // console.log('+--+: ', videoId, snippet)
   return (
-    <Card>
+    <Card
+      sx={{
+        width: { md: '320px', xs: '100%' },
+        boxShadow: 'none',
+        boarderRadius: 0,
+      }}
+    >
       {/* inside of <Link> if viedo exist pass the following to the url parameter /video/${videoId} */}
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
