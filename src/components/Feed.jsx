@@ -22,7 +22,7 @@ const Feed = () => {
       >
         <Sidebar
           selectedCategory={selectedCategory}
-          setSelectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
         />
         <Typography
           className='copyright'
@@ -39,7 +39,7 @@ const Feed = () => {
           mb={2}
           sx={{ color: 'white' }}
         >
-          New &nbsp;
+          {selectedCategory} &nbsp;
           <span style={{ color: '#f31503' }}>videos</span>
         </Typography>
         <Videos videos={[]} />
