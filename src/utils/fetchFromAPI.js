@@ -7,17 +7,12 @@ const axios = require('axios')
 const BASE_URL = 'https://youtube-v31.p.rapidapi.com/search'
 
 const options = {
-  method: 'GET',
-  url: 'https://youtube-v31.p.rapidapi.com/search',
+  url: BASE_URL,
   params: {
-    q: 'music',
-    part: 'snippet,id',
-    regionCode: 'US',
     maxResults: '50',
-    order: 'date',
   },
   headers: {
-    'X-RapidAPI-Key': 'dd0c93f82cmshc808e65ae33495cp1663c1jsn19048b5bf88d',
+    'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
     'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com',
   },
 }
