@@ -21,7 +21,7 @@ export const fetchFromAPI = async (url) => {
   return data
 }
 
-/* === without destruct data out of the response
+/* === without destructured data out of the response
 export const fetchFromAPI = async (url) => {
   const response = await axios.get(`&{BASE_URL}/${url}`, options)
   return data
