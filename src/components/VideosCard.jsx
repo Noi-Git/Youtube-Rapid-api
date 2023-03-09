@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Typography, Card, CardContent, CardMedia } from '@mui/material'
 // import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CheckCircleIcon, { CheckCircle } from '@mui/icons-material'
+import { CheckCircle } from '@mui/icons-material'
 import {
-  demoThumbnailUrl,
+  // demoThumbnailUrl,
   demoVideoUrl,
   demoVideoTitle,
   demoChannelUrl,
@@ -24,7 +24,7 @@ const VideosCard = ({
       sx={{
         width: { md: '320px', xs: '100%' },
         boxShadow: 'none',
-        boarderRadius: 0,
+        boarderRadius: '0px',
       }}
     >
       {/* inside of <Link> if viedo exist pass the following to the url parameter /video/${videoId} */}
