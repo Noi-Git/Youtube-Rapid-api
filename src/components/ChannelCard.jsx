@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { demoThumbnailUrl } from '../utils/constants'
 
 const ChannelCard = ({ channelDetail }) => {
-  // console.log('channelDetail:-- ', channelDetail)
+  console.log('channelDetail:-- ', channelDetail)
   return (
     <Box
       sx={{
@@ -31,7 +31,8 @@ const ChannelCard = ({ channelDetail }) => {
         >
           <CardMedia
             image={
-              channelDetail.snippet?.thumbnails?.high?.url || demoThumbnailUrl
+              // channelDetail.snippet?.thumbnails?.default?.url ||
+              demoThumbnailUrl
             }
             alt={channelDetail?.snippet?.title}
             sx={{
